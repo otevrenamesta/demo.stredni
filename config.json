@@ -1,0 +1,24 @@
+{
+   "title": "Middletown",
+   "lang": "cs",
+   "twitter": null,
+   "facebook": "https://www.facebook.com/otevrenamesta",
+   "gitlab": "https://gitlab.com/otevrenamesta",
+   "github": "https://github.com/otevrenamesta",
+   "instagram": null,
+   "cdn": "http://data.vxk.cz/ts/wp-content/uploads",
+   "menu": [
+     {
+        "label": "O nás",
+        "link": "/o-nas/"
+     },
+     {
+        "label": "Projekty",
+        "link": "/projekty/"
+     },
+     {
+        "label": "Stát se členem",
+        "link": "/stat-se-clenem"
+     }
+   ]
+}

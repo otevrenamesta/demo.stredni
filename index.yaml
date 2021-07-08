@@ -1,0 +1,64 @@
+title: Titulní stránka
+desc: stranka pro TS
+updated_at: 2021-01-18T12:47:37.254Z
+layout: default
+children:
+  - component: composition
+    class: container
+    children:
+      - component: hero
+        class: is-info
+        title: Middletown - virtuální město
+        content: |
+          Specializujeme se na technickou, právní 
+          a metodickou expertízu&nbsp;v oblasti digitalizace samospráv.
+  - component: composition
+    class: container>columns
+    children:
+      - component: composition
+        class: column is-two-thirds
+        children:
+          - component: newsPreview
+            class: section
+            title: novinky
+            pocet: 5
+            url: https://taborskasetkani.eu/uniapi/posts/
+            detail_title: všechny články
+            detail_link: /radnice/novinky
+          - component: newestItemsText
+            class: section
+            title: nejnovější na úřední desce
+            pocet: 5
+            url: https://taborskasetkani.eu/uniapi/posts/
+            detail_title: úřední deska
+            detail_link: /radnice/uredni-deska
+          - component: dlazdice
+            class: section is-gapless
+            items:
+              - title: služby
+                link: /radnice/sluzby
+                background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
+              - title: vzdělávání
+                link: /radnice/vzdelavani
+                background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
+              - title: kontakty
+                link: /radnice/kontakty
+                background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
+      - component: composition
+        class: column is-one-third
+        children: 
+          - component: kalendarBest
+          - component: MDText
+            class: content section
+            content: |
+              ## Otevírací doba MÚ
+              
+              |Den|Dopoledne|Odpoledne|
+              --|--|--            
+              | Pondělí   | 8:00 - 11:30 | 12:30 - 16:00 |
+              | Úterý*	| 8:00 - 11:30 | 12:30 - 14:00 |
+              | Středa 	| 8:00 - 11:30 | 12:30 - 16:00 |
+              | Čtvrtek*	| 8:00 - 11:30 | 12:30 - 14:00 |
+              | Pátek*	| 8:00 - 11:30 | 12:30 - 14:00 |
+
+              

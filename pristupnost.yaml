@@ -1,0 +1,47 @@
+title: O nás
+desc: stranka pro TS
+updated_at: 2021-01-18T12:47:37.254Z
+layout: page
+children:
+  - component: composition
+    class: container
+    children:
+      - component: MDText
+        class: content
+        content: |
+          Město se zavazuje ke zpřístupnění obsahu svých internetových stránek v souladu se zákonem č. 99/2019 Sb., o přístupnosti internetových stránek a mobilních aplikací a o změně zákona č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění pozdějších předpisů, které provádějí směrnici Evropského parlamentu a Rady (EU) 2016/2102.
+
+          Toto prohlášení o přístupnosti se vztahuje na internetové stránky www.litomysl.cz.
+
+          Stav souladu
+          Tyto webové stránky jsou částečně v souladu se zákonem č. 99/2019 Sb., ve znění pozdějších předpisů, z důvodu nesouladu nebo výjimek uvedených níže.
+
+          Nepřístupný obsah
+          Níže uvedený obsah není přístupný:
+
+          z důvodu nesouladu se zákonem č. 99/2019 Sb., ve znění pozdějších předpisů:
+          • Odkazy na náhledových fotografiích a ve fotogaleriích nemají vždy textový popis, protože obrázky nemají uvedený alternativní text (kritéria 1.1.1 a 2.4.4 standardu WCAG 2.1). Vzhledem k množství fotografií a kapacitám provozovatele webu by doplnění smysluplného alternativní text ke všem fotografiím způsobilo nepřiměřenou zátěž (podle § 7 zákona)
+          jelikož nespadá do oblasti působnosti platných právních předpisů:
+          • Videa na internetových stránkách neobsahují ani titulky ani audio popis či alternativu (kritéria 1.2.1 a 1.2.2 standardu WCAG 2.1), na základě výjimky podle § 13 odstavce 4 zákona č. 99/2019 Sb.
+          Vypracování tohoto prohlášení o přístupnosti
+          Toto prohlášení bylo vypracováno dne 14. 10. 2020.
+
+          Prohlášení bylo vypracováno posouzením provedeným třetí stranou – zpracovatelem těchto internetových stránek Mgr. Matyášem Hájkem.
+
+          Při posuzování se sledovala shoda s kritérii uvedenými v Metodickém pokynu k zákonu č. 99/2019 Sb., ve znění pozdějších předpisů a standardu Web Content Accessibility Guidelines – WCAG 2.1.
+
+          Zpětná vazba a kontaktní údaje
+          Vaše náměty či informace o problémech při zobrazování stránek, stejně jako dotazy, návrhy nebo připomínky týkající se obsahu webu či důvodného podezření, že webová stránka nesplňuje požadavky zákona č. 99/2019 Sb., ve znění pozdějších předpisů, včetně možnosti podat podnět vůči příslušným státním orgánům, můžete psát na adresu: mesto@litomysl.cz
+
+          Kontakt na osobu odpovědnou za přístupnost stránek a za zpracování žádostí zaslaných prostřednictvím mechanismu zpětné vazby:
+
+          Městský úřad Litomyšl
+          Bří Šťastných 1000, Litomyšl 570 20
+          email: mesto@litomysl.cz
+
+          Postup pro prosazování práva
+          V případě neuspokojivé odpovědi na zpětnou vazbu dle předchozího odstavce, můžete kontaktovat příslušný orgán pro prosazování práva:
+
+          Ministerstvo vnitra, odbor eGovernmentu
+          náměstí Hrdinů 1634/3, 140 21 Praha 4
+          email: pristupnost@mvcr.cz
