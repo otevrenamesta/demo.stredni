@@ -19,7 +19,7 @@ export default {
     <div class="navbar-menu" :class="expanded ? 'is-active' : ''">
       <div class="navbar-end">
 
-        <router-link v-for="i in $store.state.site.menu" class="navbar-item" :to="i.link">
+        <router-link v-for="i,idx in $store.state.site.menu" :key="idx" class="navbar-item" :to="i.link">
           {{ i.label }}
         </router-link>
 

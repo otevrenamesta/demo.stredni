@@ -1,0 +1,23 @@
+title: Middletown
+lang: cs
+twitter:
+facebook: https://www.facebook.com/otevrenamesta
+gitlab: https://gitlab.com/otevrenamesta
+github: https://github.com/otevrenamesta
+instagram:
+cdn: http://data.vxk.cz/ts/wp-content/uploads
+menu:
+- label: Radnice
+  link: "/radnice/"
+- label: Volný čas
+  link: "/volny-cas/"
+detailpages:
+- path: /posts/
+  url: https://taborskasetkani.eu/uniapi/posts/?filter={"id":"{{ID}}"}
+  layout: postDetail
+  titleattr: title
+  children:
+    - component: newestItemsText
+      title: podobne clanky
+      pocet: 5
+      url: https://taborskasetkani.eu/uniapi/posts/

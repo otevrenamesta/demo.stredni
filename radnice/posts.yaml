@@ -1,0 +1,16 @@
+title: O nás
+desc: stranka pro TS
+updated_at: 2021-01-18T12:47:37.254Z
+layout: page
+children:
+  - component: composition
+    class: container
+    children:
+      - component: MDText
+        class: content
+        content: |
+          __Specializujeme se na Technickou, právní a metodickou
+          expertízu v oblasti digitalizace samospráv.
+          Máme bohaté zkušenosti s budováním open source aplikací pro samosprávy__
+
+          ## [Projektová rada](projektova-rada)

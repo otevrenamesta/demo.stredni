@@ -34,9 +34,8 @@ export default {
   <div v-if="loaded" class="columns">
     <router-link v-for="i,idx in items" :key="idx" class="column" 
       :style="style(i)"      
-      to="/radnice"
+      :to="'/posts/' + i.id"
     >
-
       <h1>{{ i.title }}</h1>
     </router-link>
   </div>
