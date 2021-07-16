@@ -3,3 +3,5 @@ _service/metainfo.json
 _service/routes.json
 _service/vendor.js
 README.md
+node_modules
+*.sh

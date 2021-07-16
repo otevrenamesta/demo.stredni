@@ -31,7 +31,9 @@ export default {
   </div>
   
   <router-link v-if="data.detail_link" :to="data.detail_link">
-    {{ data.detail_title || 'detaily' }}
+    <button class="button is-primary is-fullwidth">
+      {{ data.detail_title || 'detaily' }} >> 
+    </button>
   </router-link>
 
 </div>

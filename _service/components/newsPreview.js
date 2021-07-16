@@ -26,22 +26,55 @@ export default {
     }
   },
   props: ['data'],
+  methods: {
+    tagArray: function (i) {
+      return 
+    }
+  },
   template: `
 <div :class="data.class">
   
   <h1 class="title is-1">{{ data.title }}</h1>
 
-  <div v-if="loaded" class="columns">
-    <router-link v-for="i,idx in items" :key="idx" class="column" 
-      :style="style(i)"      
-      :to="'/posts/' + i.id"
-    >
-      <h1>{{ i.title }}</h1>
+  <div v-if="loaded" class="columns is-multiline">
+    <div v-for="i,idx in items" :key="idx" class="column is-one-third">
+
+      <router-link :to="'/posts/' + i.id">
+
+        <div class="card">
+          
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img :src="$store.getters.mediaUrl(i.obrazek, 'w=640')" 
+                alt="i.title">
+            </figure>
+          </div>
+
+          <div class="card-content">        
+            <div class="content">
+              <h1 class="title is-4">{{ i.title }}</h1>
+              <h2 class="subtitle is-7">
+                <time datetime="2016-1-1">{{ i.published | longDate }}</time>
+              </h2>
+              <markdown :text="i.perex" />
+
+              <div class="tags my-3">
+                <router-link to="/" v-for="i in i.tags.split(',')" :key="i" class="tag">
+                  #{{ i }}
+                </router-link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </router-link>
   </div>
-  
+
   <router-link v-if="data.detail_link" :to="data.detail_link">
-    {{ data.detail_title || 'detaily' }}
+    <button class="button is-primary is-fullwidth">
+      {{ data.detail_title || 'detaily' }} >> 
+    </button>
   </router-link>
 
 </div>

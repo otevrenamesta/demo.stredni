@@ -10,8 +10,7 @@ children:
         class: is-info
         title: Middletown - virtuální město
         content: |
-          Specializujeme se na technickou, právní 
-          a metodickou expertízu&nbsp;v oblasti digitalizace samospráv.
+          Ukázka webu střdně velkého města (ORP)
   - component: composition
     class: container>columns
     children:
@@ -21,15 +20,15 @@ children:
           - component: newsPreview
             class: section
             title: novinky
-            pocet: 5
-            url: https://taborskasetkani.eu/uniapi/posts/
+            pocet: 3
+            url: /uniapi/posts/
             detail_title: všechny články
             detail_link: /radnice/novinky
           - component: newestItemsText
             class: section
             title: nejnovější na úřední desce
             pocet: 5
-            url: https://taborskasetkani.eu/uniapi/posts/
+            url: /uniapi/posts/
             detail_title: úřední deska
             detail_link: /radnice/uredni-deska
           - component: dlazdice
@@ -48,6 +47,11 @@ children:
         class: column is-one-third
         children: 
           - component: kalendarBest
+            url: /uniapi/events/
+            pocet: 5
+            title: nejbližší události
+            detail_title: Kalendář
+            detail_link: /volny-cas/kalendar
           - component: MDText
             class: content section
             content: |

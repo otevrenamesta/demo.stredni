@@ -5,7 +5,7 @@ facebook: https://www.facebook.com/otevrenamesta
 gitlab: https://gitlab.com/otevrenamesta
 github: https://github.com/otevrenamesta
 instagram:
-cdn: http://data.vxk.cz/ts/wp-content/uploads
+cdn: /cdn/
 menu:
 - label: Radnice
   link: "/radnice/"
