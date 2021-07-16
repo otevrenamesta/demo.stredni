@@ -10,13 +10,13 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li><router-link to="/"><i class="fas fa-home"></i></router-link></li>
-          <li><router-link to="/novinky">Aktuality</router-link></li>
+          <li><router-link to="/kalendar">Kalendář</router-link></li>
         </ul>
       </nav>
       
       <h1 class="title">{{item.title}}</h1>
 
-      <h4 class="subtitle is-6">{{item.published | date }}</h4>
+      <h4 class="subtitle is-6">{{item.cas | longDate }}</h4>
 
       <img v-if="item.obrazek" :src="item.obrazek" />
 

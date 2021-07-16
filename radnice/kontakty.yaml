@@ -1,0 +1,16 @@
+title: Kontakty
+desc: stranka pro TS
+updated_at: 2021-01-18T12:47:37.254Z
+layout: page
+children:
+  - component: composition
+    class: container
+    children:
+      - component: MDText
+        class: content
+        content: |
+          Tato stranka obsahuje kontakty na jednotlive pracovniky uradu.
+          Muze ji naplnovat manualne povereny pracovnik ...
+
+          ... a nebo se muze __automaticky generovat__ z uradoveho uzivatelskeho kmene.
+          

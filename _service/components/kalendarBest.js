@@ -24,17 +24,19 @@ export default {
     <h2 class="title is-2">{{ data.title }}</h2>
 
     <div v-if="loaded" v-for="i,idx in items" :key="idx">
-      <router-link :to="'/posts/' + i.id">
+      <router-link :to="data.detail_link + '/' + i.id">
         <h3 class="title is-3">{{ i.title }}</h3>
         <h4 class="subtitle is-4">{{ i.cas | longDate }}</h4>
       </router-link>
     </div>
     
-    <router-link class="my-5" v-if="data.detail_link" :to="data.detail_link">
-      <button class="button is-primary is-fullwidth">
-        {{ data.detail_title || 'detaily' }} >> 
-      </button>
-    </router-link>
+    <div class="my-5">
+      <router-link :to="data.detail_link">
+        <button class="button is-primary is-fullwidth">
+          {{ data.detail_title || 'detaily' }} >> 
+        </button>
+      </router-link>
+    </div>
   </div>
   `
 }

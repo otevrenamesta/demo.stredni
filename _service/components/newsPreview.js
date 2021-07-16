@@ -1,3 +1,40 @@
+const TagSelector = {
+  data: function () {
+    return {
+      selected: null,
+      loaded: false
+    }
+  },
+  created: async function () {
+    try {
+      const req = await axios.get(this.$props.data.url + '/config.json')
+      const opts = _.findWhere(req.data.attrs, { name: 'tags' }).options
+      this.$data.typeOpts = _.filter(opts, i => i.value !== 'index')
+      this.$data.typeOpts.unshift({ text: 'Vše', value: null })
+    } catch (_) {
+      alert('newsPreview: data.cfgUrl spatne')
+    } finally {
+      this.$data.loaded = true
+    }
+  },
+  props: ['data', 'doSelect'],
+  methods: {
+    select: function (i) {
+      this.$data.selected = i.value
+      this.$props.doSelect(i)
+    }
+  },
+  template: `
+  <div v-if="loaded" class="tabs is-toggle is-centered">
+    <ul>
+      <li v-for="i, idx in $data.typeOpts" :key="idx" 
+        :class="$data.selected === i.value ? 'is-active' : ''">
+        <a href="javascript:void(0);" @click="select(i)">{{ i.text }}</a>
+      </li>
+    </ul>
+  </div>
+  `
+}
 
 export default {
   data: function () {
@@ -7,39 +44,41 @@ export default {
     }
   },
   created: async function () {
-    try {
-      const count = this.$props.data.pocet
-      let url = `${this.$props.data.url}?sort=published:asc`
-      if (count) url = `${url}&currentPage=1&perPage=${count}`
-      const dataReq = await axios.get(url)
-      this.$data.items = count ? dataReq.data.data : dataReq.data
-    } catch (_) {
-      this.$data.items = [{ title: 'newsPreview: asi spatne url v datech' }]
-    } finally {
-      this.$data.loaded = true
-    }
+    this.load()
   },
   methods: {
-    style: function (i) {
-      const url = 'https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg'
-      return { 'background-image' : `url(${url})` }
+    load: async function (opt) {
+      try {
+        const filter = (!opt || !opt.value) ? null : {
+          tags: { like: "%" + opt.value + "%" }
+        }
+        const dataReq = await axios.get(this.$props.data.url, { params: {
+          sort: 'published:asc',
+          currentPage:1,
+          perPage: this.$props.data.pocet,
+          filter: JSON.stringify(filter)
+        }})
+        this.$data.items = dataReq.data.data
+      } catch (_) {
+        this.$data.items = [{ title: 'newsPreview: asi spatne url v datech' }]
+      } finally {
+        this.$data.loaded = true
+      }
     }
   },
   props: ['data'],
-  methods: {
-    tagArray: function (i) {
-      return 
-    }
-  },
+  components: { TagSelector },
   template: `
 <div :class="data.class">
   
   <h1 class="title is-1">{{ data.title }}</h1>
 
+  <TagSelector :data="data" :doSelect="load" />
+
   <div v-if="loaded" class="columns is-multiline">
     <div v-for="i,idx in items" :key="idx" class="column is-one-third">
 
-      <router-link :to="'/posts/' + i.id">
+      <router-link :to="data.detail_link + '/' + i.id">
 
         <div class="card">
           
@@ -59,8 +98,11 @@ export default {
               <markdown :text="i.perex" />
 
               <div class="tags my-3">
-                <router-link to="/" v-for="i in i.tags.split(',')" :key="i" class="tag">
-                  #{{ i }}
+                <router-link
+                  v-for="j in i.tags.split(',')" :key="j" class="tag"
+                  :to="data.detail_link + '?tag=' + j"
+                >
+                  #{{ j }}
                 </router-link>
               </div>
             </div>
@@ -71,7 +113,7 @@ export default {
     </router-link>
   </div>
 
-  <router-link v-if="data.detail_link" :to="data.detail_link">
+  <router-link :to="data.detail_link">
     <button class="button is-primary is-fullwidth">
       {{ data.detail_title || 'detaily' }} >> 
     </button>

@@ -2,17 +2,15 @@
 
   <pageHeader />
 
-  <section class="section">
-    <div class="container">
-      <h1 class="title">{{data.title}}</h1>
-    </div>
-  </section>
+  <div class="container">
+    <h1 class="title section">{{data.title}}</h1>
 
-  <section v-for="(i, idx) in data.children" :key="idx" class="section">
+    <section v-for="(i, idx) in data.children" :key="idx" class="section">
 
-    <component :is="i.component" :data="i" />
-
-  </section>
+      <component :is="i.component" :data="i" />
+  
+    </section>
+  </div>
 
   <pageFooter />
 

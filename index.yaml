@@ -23,7 +23,7 @@ children:
             pocet: 3
             url: /uniapi/posts/
             detail_title: všechny články
-            detail_link: /radnice/novinky
+            detail_link: /novinky
           - component: newestItemsText
             class: section
             title: nejnovější na úřední desce
@@ -35,12 +35,18 @@ children:
             class: section is-gapless
             items:
               - title: služby
+                color: primary
                 link: /radnice/sluzby
+                content: Seznam všch služeb občanům a adekvátní formuláře.
                 background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
               - title: vzdělávání
+                color: success
                 link: /radnice/vzdelavani
+                content: Vše, co se týče základních škol, školek, aj.
                 background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
               - title: kontakty
+                color: warning
+                content: Seznam všech kontaktů na pracovníky úřadu.
                 link: /radnice/kontakty
                 background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
       - component: composition
@@ -51,7 +57,7 @@ children:
             pocet: 5
             title: nejbližší události
             detail_title: Kalendář
-            detail_link: /volny-cas/kalendar
+            detail_link: /kalendar
           - component: MDText
             class: content section
             content: |

@@ -6,17 +6,18 @@ export default {
     }
   },
   template: `
-<div class="columns dlazdice" :class="data.class">
-
-  <router-link class="column"
-    v-for="i,idx in data.items" :key="idx" 
-    :to="i.link"
-    :style="style(i)">
-
-    <h1>{{ i.title }}</h1>
-    <markdown :text="i.content" />
-  </router-link>
-
+<div class="tile is-ancestor dlazdice" :class="data.class">
+  <div v-for="i,idx in data.items" :key="idx" class="tile is-parent">
+    <router-link :to="i.link"      
+      class="tile is-child box notification"
+      :class="'is-' + i.color"
+    >
+      <div class="content">
+        <h3 class="title is-4">{{ i.title }}</h3>
+        <markdown :text="i.content" />
+      </div>
+    </router-link>
+  </div>
 </div>
   `
 }

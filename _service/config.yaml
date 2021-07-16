@@ -12,12 +12,21 @@ menu:
 - label: Volný čas
   link: "/volny-cas/"
 detailpages:
-- path: /posts/
-  url: https://taborskasetkani.eu/uniapi/posts/?filter={"id":"{{ID}}"}
-  layout: postDetail
-  titleattr: title
-  children:
-    - component: newestItemsText
-      title: podobne clanky
-      pocet: 5
-      url: https://taborskasetkani.eu/uniapi/posts/
+  - path: /novinky/
+    url: /uniapi/posts/?filter={"id":"{{ID}}"}
+    layout: postDetail
+    titleattr: title
+    children:
+      - component: newestItemsText
+        title: podobne clanky
+        pocet: 5
+        url: /uniapi/posts/
+  - path: /kalendar/
+    url: /uniapi/events/?filter={"id":"{{ID}}"}
+    layout: eventDetail
+    titleattr: title
+    # children:
+    #   - component: newestItemsText
+    #     title: podobne clanky
+    #     pocet: 5
+    #     url: /uniapi/posts/

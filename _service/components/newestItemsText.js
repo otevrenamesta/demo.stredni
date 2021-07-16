@@ -22,7 +22,7 @@ export default {
   template: `
 <div :class="data.class">
   
-  <h1 class="title is-1">{{ data.title }}</h1>
+  <h2 class="title is-2">{{ data.title }}</h2>
 
   <div v-if="loaded" class="content">
     <ul>
