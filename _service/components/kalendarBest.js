@@ -25,8 +25,10 @@ export default {
 
     <div v-if="loaded" v-for="i,idx in items" :key="idx">
       <router-link :to="data.detail_link + '/' + i.id">
-        <h3 class="title is-3">{{ i.title }}</h3>
-        <h4 class="subtitle is-4">{{ i.cas | longDate }}</h4>
+        <h3 class="title is-4">{{ i.title }}</h3>
+        <h4 class="subtitle is-6">
+          {{ i.cas | longDate }} / {{ i.misto }}
+        </h4>
       </router-link>
     </div>
     

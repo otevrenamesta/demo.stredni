@@ -1,6 +1,8 @@
 // 1. Import the initial variables
 @import "bulma/sass/utilities/initial-variables";
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 // 2. Set your own initial variables
 // Update the blue shade, used for links
 // $blue: #06bcef;
@@ -17,7 +19,7 @@
 
 // Update the sans-serif font family
 // @import "./fonts";
-// $family-primary: "acumin-pro-wide", $family-sans-serif;
+$family-primary: 'Open Sans', $family-sans-serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color

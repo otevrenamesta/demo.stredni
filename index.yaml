@@ -32,20 +32,30 @@ children:
             detail_title: úřední deska
             detail_link: /radnice/uredni-deska
           - component: dlazdice
-            class: section is-gapless
+            class: section
+            detail_title: podstránka radnice
+            detail_link: /radnice/
             items:
               - title: služby
                 color: primary
                 link: /radnice/sluzby
                 content: Seznam všch služeb občanům a adekvátní formuláře.
+                icon: fa-briefcase
                 background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
               - title: vzdělávání
                 color: success
                 link: /radnice/vzdelavani
+                icon: fa-book-open
                 content: Vše, co se týče základních škol, školek, aj.
                 background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
+              - title: jfslfj
+                color: warning
+                icon: fa-phone
+                content: Seznam všech kontaktů na pracovníky úřadu.
+                link: /radnice/kontakty
               - title: kontakty
                 color: warning
+                icon: fa-phone
                 content: Seznam všech kontaktů na pracovníky úřadu.
                 link: /radnice/kontakty
                 background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
@@ -58,6 +68,10 @@ children:
             title: nejbližší události
             detail_title: Kalendář
             detail_link: /kalendar
+          - component: zivotniSituaceIndex
+            title: Potřebuji vyřídit / Životní situace
+            detail_title: Služby
+            detail_link: /radnice/sluzby
           - component: MDText
             class: content section
             content: |
