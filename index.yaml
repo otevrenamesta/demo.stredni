@@ -28,9 +28,9 @@ children:
             class: section
             title: nejnovější na úřední desce
             pocet: 5
-            url: /uniapi/posts/
+            url: /uniapi/urednideskas/
             detail_title: úřední deska
-            detail_link: /radnice/uredni-deska
+            detail_link: /uredni-deska
           - component: dlazdice
             class: section
             detail_title: podstránka radnice

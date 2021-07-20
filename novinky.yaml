@@ -6,11 +6,6 @@ children:
   - component: composition
     class: container
     children:
-      - component: MDText
-        class: content
-        content: |
-          __Specializujeme se na Technickou, právní a metodickou
-          expertízu v oblasti digitalizace samospráv.
-          Máme bohaté zkušenosti s budováním open source aplikací pro samosprávy__
-
-          ## [Projektová rada](projektova-rada)
+      - component: postIndex
+        url: /uniapi/posts/
+        pagesize: 4

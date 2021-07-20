@@ -1,0 +1,57 @@
+title: Volný čas
+desc: stranka pro TS
+updated_at: 2021-01-18T12:47:37.254Z
+layout: default
+children:
+  - component: composition
+    class: container
+    children:
+      - component: hero
+        class: is-info
+        title: Middletown - virtuální město
+        content: |
+          Speciální stránka pro volný čas
+  - component: composition
+    class: container>columns
+    children:
+      - component: composition
+        class: column is-two-thirds
+        children:
+          - component: kalendarBest
+            url: /uniapi/events/
+            pocet: 5
+            title: nejbližší události
+            detail_title: Kalendář
+            detail_link: /kalendar
+          - component: dlazdice
+            class: section
+            items:
+              - title: kultura
+                link: kultura
+                icon: fa-briefcase
+              - title: vzdělávání
+                link: /radnice/vzdelavani
+                icon: fa-book-open
+              - title: o městě
+                icon: fa-phone
+                link: o-meste
+              - title: památky
+                icon: fa-phone
+                link: pamatky
+      - component: composition
+        class: column is-one-third
+        children: 
+          - component: MDText
+            class: content section
+            content: |
+              ## Otevírací infocentra
+              
+              |Den|Dopoledne|Odpoledne|
+              --|--|--
+              | Pondělí   | 8:00 - 11:30 | 12:30 - 16:00 |
+              | Úterý*	| 8:00 - 11:30 | 12:30 - 14:00 |
+              | Středa 	| 8:00 - 11:30 | 12:30 - 16:00 |
+              | Čtvrtek*	| 8:00 - 11:30 | 12:30 - 14:00 |
+              | Pátek*	| 8:00 - 11:30 | 12:30 - 14:00 |
+
+              

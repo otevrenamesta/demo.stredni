@@ -1,0 +1,14 @@
+title: úřední deska
+desc: stranka pro TS
+updated_at: 2021-01-18T12:47:37.254Z
+breadcrumbs:
+  - link: /radnice
+    title: Radnice
+layout: page
+children:
+  - component: composition
+    class: container
+    children:
+      - component: uredniDeska
+        class: content
+        url: /uniapi/urednideskas/

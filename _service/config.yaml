@@ -11,6 +11,9 @@ menu:
   link: "/radnice/"
 - label: Volný čas
   link: "/volny-cas/"
+globalComponents:
+  - breadCrumbs
+  - paginator
 detailpages:
   - path: /novinky/
     url: /uniapi/posts/?filter={"id":"{{ID}}"}
