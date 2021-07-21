@@ -1,4 +1,6 @@
-# Demo web "středně velkého města" - ORP
+# Demo [web "středně velkého města"](https://stredni.web.otevrenamesta.cz/) - ORP
+
+## Obecně
 
 Web se skládá ze stránek, které jsou hierarchicky uspořádány.
 Hierarchie by měla ideálně odpovídat logice detailu informace.
@@ -17,8 +19,17 @@ např. kontatkní informace pomocí řádky boxů se jménem, pozicí, kulatou f
 a zbytkem kontaktních informací i s patřičnými ikonami.
 To už vyžaduje spec. komponetu a strukturu dat, které se pomocí ní, kreslí.
 
+## Web obce
+
+Dobrý web obce zatěžuje úředníky co možná nejméně.
+Má jednoduchý způsob zprávy a umožňuje neduplikovat práci = umí se napojit 
+na existující IS, které úředníci tak jako tak používají.
+Udržuje se tedy aktuální defacto automaticky.
+
+### obecně
+
 Každá obec na svých webových stránkách __musí__ mít:
-TODO
+https://www.zakonyprolidi.cz/cs/2020-515/zneni-20201226
 
 Další užitečné "komponenty" webu obce bývají:
 - kalendář akcí
@@ -42,3 +53,8 @@ Tato komponenta je mj. použita na titulce (v pravém sloupci).
 Její použití znamená [definovat název komponenty a její atributy](index.yaml#L65):
 - url datového zdroje
 - počet nejnovějších položek
+
+## Vizuální styl
+
+Demoweb používá stylovací framework [bulma.io](https://bulma.io/).
+Jedná se o otevřený, plně customizovatelný system, který tvoří řada odborníků.
