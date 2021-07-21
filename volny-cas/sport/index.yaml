@@ -1,4 +1,4 @@
-title: O nás
+title: Sport
 desc: stranka pro TS
 updated_at: 2021-01-18T12:47:37.254Z
 layout: page
@@ -9,13 +9,8 @@ children:
       - component: MDText
         class: content
         content: |
-          __Specializujeme se na Technickou, právní a metodickou
-          expertízu v oblasti digitalizace samospráv.
-          Máme bohaté zkušenosti s budováním open source aplikací pro samosprávy__
+          Ve *virtuálním městě* je sportovců ráj.
+          Neexistuje nedostatek sportovišť.
+          Sportovat se dá všude.
 
-          ## [Projektová rada](projektova-rada)
-
-          Projektová rada je expertním orgánem Výboru Otevřených měst. 
-          Cílem projektové rady je diskutovat technické, produktové 
-          a infrastrukturní otázky spojené s digitalizací místních samospráv 
-          a předkládat stanoviska Výboru pro další směřování spolku. 
+          ![high five](https://qualitrain.net/wp-content/uploads/2019/08/motivation-sport-qualitrain.jpg)

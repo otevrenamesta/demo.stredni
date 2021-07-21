@@ -13,7 +13,7 @@ export default {
       const dataReq = await axios.get(url)
       this.$data.items = dataReq.data.data
     } catch (_) {
-      this.$data.items = [{ title: 'newsPreview: asi spatne url v datech' }]
+      this.$data.items = [{ title: 'kalendarBest: asi spatne url v datech' }]
     } finally {
       this.$data.loaded = true
     }
