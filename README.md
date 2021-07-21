@@ -26,7 +26,7 @@ Další užitečné "komponenty" webu obce bývají:
 - klíčové investice / strategický plán
 - aj.
 
-Web je __"lepidlo otevřených dat" z externích zdrojů / informačních systémů (IS).
+Web je __"lepidlo otevřených dat"__ z externích zdrojů / informačních systémů (IS).
 Takovým systémem může být již fungující IS úřední desky.
 Aby se informace z úřední desky dostaly na web, stačí pouze implementovat komponentu,
 která se na tento IS připojí, stáhne si informace ve strojově čitelné formě (např. JSON)
