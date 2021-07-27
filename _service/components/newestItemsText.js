@@ -13,28 +13,28 @@ export default {
       const dataReq = await axios.get(url)
       this.$data.items = count ? dataReq.data.data : dataReq.data
     } catch (_) {
-      this.$data.posts = [{ title: 'newsPreview: asi spatne url v datech' }]
+      this.$data.posts = [{ title: 'newestItemsText: asi spatne url v datech' }]
     } finally {
       this.$data.loaded = true
     }
   },
   props: ['data'],
   template: `
-<div :class="data.class">
+<div :class="data.class" class="menu">
   
-  <h2 class="title is-2">{{ data.title }}</h2>
+  <h2 class="menu-label title is-2">{{ data.title }}</h2>
 
-  <div v-if="loaded" class="content">
-    <ul>
-      <li v-for="i, idx in items" :key="idx">{{ i.title }}</li>
-    </ul>
-  </div>
+  <ul class="menu-list" v-if="loaded">
+    <li v-for="i, idx in items" :key="idx">{{ i.title }}</li>
+  </ul>
   
-  <router-link v-if="data.detail_link" :to="data.detail_link">
-    <button class="button is-primary is-fullwidth">
-      {{ data.detail_title || 'detaily' }} >> 
-    </button>
-  </router-link>
+  <div class="my-5">
+    <router-link v-if="data.detail_link" :to="data.detail_link">
+      <button class="button is-primary is-fullwidth">
+        {{ data.detail_title || 'detaily' }} >> 
+      </button>
+    </router-link>
+  </div>
 
 </div>
   `

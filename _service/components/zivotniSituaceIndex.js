@@ -1,13 +1,19 @@
-const items = [
-  { title: 'Doprava', link: '' },
-  { title: 'Majetek', link: '' },
-  { title: 'Občan', link: '' }
-]
-
 export default {
   computed: {
     items: function () {
       return items
+    }
+  },
+  created: async function () {
+    try {
+      const count = this.$props.data.pocet || 5
+      let url = `${this.$props.data.url}?sort=cas:asc&currentPage=1&perPage=${count}`
+      const dataReq = await axios.get(url)
+      this.$data.items = dataReq.data.data
+    } catch (_) {
+      this.$data.items = [{ title: 'kalendarBest: asi spatne url v datech' }]
+    } finally {
+      this.$data.loaded = true
     }
   },
   props: ['data'],

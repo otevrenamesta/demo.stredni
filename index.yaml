@@ -68,8 +68,9 @@ children:
             title: nejbližší události
             detail_title: Kalendář
             detail_link: /kalendar
-          - component: zivotniSituaceIndex
+          - component: formsAnnonce
             title: Potřebuji vyřídit / Životní situace
+            url: /uniapi/forms/
             detail_title: Služby
             detail_link: /radnice/sluzby
           - component: MDText

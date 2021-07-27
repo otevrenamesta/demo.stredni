@@ -15,21 +15,16 @@ globalComponents:
   - breadCrumbs
   - paginator
 detailpages:
-  - path: /novinky/
-    url: /uniapi/posts/?filter={"id":"{{ID}}"}
-    layout: postDetail
-    titleattr: title
-    children:
-      - component: newestItemsText
-        title: podobne clanky
-        pocet: 5
-        url: /uniapi/posts/
-  - path: /kalendar/
-    url: /uniapi/events/?filter={"id":"{{ID}}"}
-    layout: eventDetail
-    titleattr: title
+  - path: /novinky/:id
+    component: ./components/detailPage/post.js
+  - path: /kalendar/:id
+    component: ./components/detailPage/kalendar.js
+  - path: /formulare/:id
+    component: ./components/detailPage/form.js
     # children:
     #   - component: newestItemsText
     #     title: podobne clanky
     #     pocet: 5
     #     url: /uniapi/posts/
+  - path: /formulare
+    component: ./components/listPage/form.js
