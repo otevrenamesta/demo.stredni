@@ -9,7 +9,7 @@ export default {
     profile: function () {
       const u = this.$store.state.user
       return this.$store.getters.userLogged ? {
-        jmeno: u.CurrentGivenName,
+        jmeno: u.CurrentFamilyName,
         prijmeni: u.CurrentGivenName,
         id: u['ZR10 IdType'] + u['ZR10 IdNumber'],
         obec: u.CurrentAddress.PostName,
@@ -68,14 +68,14 @@ export default {
       
       <h1 class="title">{{item.title}}</h1>
 
+      <DynamicForm :cfg="item" :data="profile" />
+
       <div class="notification is-info">
         <span class="icon is-large"><i class="fas fa-info-circle"></i></span>
         Přihlášení uživatelé mohou formulář odeslat přímo.
         Další možnosti: formulář vytisknout a donést na podatelnu,
         nebo poslat datovou schránkou.
       </div>
-
-      <DynamicForm :cfg="item" :data="profile" />
 
     </section>
 
