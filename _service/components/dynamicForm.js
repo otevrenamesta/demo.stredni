@@ -33,6 +33,11 @@ export default {
       formdata: []
     }
   },
+  computed: {
+    hasErrors: function () {
+      this.errors.length > 0
+    }
+  },
   created: function () {
     this.$data.formcontrol = jsyaml.load(this.$props.cfg.form)
     this.$data.formdata = _.reduce(this.$data.formcontrol, (acc, i) => {
@@ -99,19 +104,28 @@ export default {
 
   <div class="field has-addons">
     <p class="control">
-      <button class="button is-success" :disabled="submitting">
+      <button class="button is-success" 
+          :disabled="submitting || hasErrors"
+          @click="handleSubmit"
+      >
         <span class="icon is-small"><i class="fas fa-bold"></i></span>
         <span>Odeslat</span>
       </button>
     </p>
     <p class="control">
-      <button class="button is-danger" :disabled="submitting">
+      <button class="button is-danger" 
+        :disabled="submitting || hasErrors"
+        @click="handleSubmit"
+      >
         <span class="icon is-small"><i class="fas fa-italic"></i></span>
-        <span>Stáhnout</span>
+        <span>Stáhnout PDF</span>
       </button>
     </p>
     <p class="control">
-      <button class="button is-warning" :disabled="submitting">
+      <button class="button is-warning" 
+          :disabled="submitting || hasErrors"
+          @click="handleSubmit"
+      >
         <span class="icon is-small">
           <i class="fas fa-underline"></i>
         </span>
