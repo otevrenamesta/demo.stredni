@@ -14,8 +14,8 @@ export default {
         id: u['ZR10 IdType'] + u['ZR10 IdNumber'],
         obec: u.CurrentAddress.PostName,
         psc: u.CurrentAddress.PostCode,
-        narozeni: DateOfBirth,
-        email: Email
+        narozeni: u.DateOfBirth,
+        email: u.Email
       } : null
     }
   },
