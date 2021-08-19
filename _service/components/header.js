@@ -32,15 +32,19 @@ export default {
       </div>
     </div>
 
-    <div class="navbar-end">
+    <div class="navbar-end" v-if="this.$store.getters.userLogged">
       <div class="navbar-item">
-        <span v-if="this.$store.getters.userLogged">
-          {{ $store.state.user.CurrentFamilyName }} {{ $store.state.user.CurrentGivenName }}
-          <a class="button is-primary" href="/nia/logout">
-            Odhlásit
-          </a>
-        </span>
-        <div v-else class="buttons">
+        {{ $store.state.user.CurrentFamilyName }} {{ $store.state.user.CurrentGivenName }}
+      </div>
+      <div class="">
+        <a class="button is-danger" href="/nia/logout">
+          Odhlásit
+        </a>
+      </div>
+    </div>
+    <div v-else class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
           <a class="button is-primary" href="https://www.eidentita.cz/Home">
             <strong>Zaregistrovat</strong>
           </a>
