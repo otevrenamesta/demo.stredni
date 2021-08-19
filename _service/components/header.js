@@ -36,7 +36,7 @@ export default {
       <div class="navbar-item">
         {{ $store.state.user.CurrentFamilyName }} {{ $store.state.user.CurrentGivenName }}
       </div>
-      <div class="">
+      <div class="navbar-item">
         <a class="button is-danger" href="/nia/logout">
           Odhlásit
         </a>
