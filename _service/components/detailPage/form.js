@@ -7,7 +7,7 @@ export default {
   },
   computed: {
     profile: function () {
-      const u = $store.state.user
+      const u = this.$store.state.user
       return this.$store.getters.userLogged ? {
         jmeno: u.CurrentGivenName,
         prijmeni: u.CurrentGivenName,
