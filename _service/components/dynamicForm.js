@@ -77,7 +77,7 @@ export default {
   props: ['cfg', 'data'],
   components: formComponents,
   template: `
-<form>
+<form @submit.prevent="handleSubmit">
 
   <div class="columns is-flex-wrap-wrap">
     <div class="column" :class="i.class" v-for="i, idx in $data.formcontrol" :key="idx">
@@ -106,7 +106,6 @@ export default {
     <p class="control">
       <button class="button is-success" 
           :disabled="submitting || hasErrors"
-          @click="handleSubmit"
       >
         <span class="icon is-small"><i class="fas fa-bold"></i></span>
         <span>Odeslat</span>
@@ -115,7 +114,6 @@ export default {
     <p class="control">
       <button class="button is-danger" 
         :disabled="submitting || hasErrors"
-        @click="handleSubmit"
       >
         <span class="icon is-small"><i class="fas fa-italic"></i></span>
         <span>Stáhnout PDF</span>
@@ -124,7 +122,6 @@ export default {
     <p class="control">
       <button class="button is-warning" 
           :disabled="submitting || hasErrors"
-          @click="handleSubmit"
       >
         <span class="icon is-small">
           <i class="fas fa-underline"></i>
