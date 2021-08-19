@@ -5,6 +5,20 @@ export default {
       loading: true
     }
   },
+  computed: {
+    profile: function () {
+      const u = $store.state.user
+      return this.$store.getters.userLogged ? {
+        jmeno: u.CurrentGivenName,
+        prijmeni: u.CurrentGivenName,
+        id: u['ZR10 IdType'] + u['ZR10 IdNumber'],
+        obec: u.CurrentAddress.PostName,
+        psc: u.CurrentAddress.PostCode,
+        narozeni: DateOfBirth,
+        email: Email
+      } : null
+    }
+  },
   created: async function () {
     try {
       const id = this.$router.currentRoute.params.id
@@ -61,7 +75,7 @@ export default {
         nebo poslat datovou schránkou.
       </div>
 
-      <DynamicForm :data="item" />
+      <DynamicForm :cfg="item" :data="profile" />
 
     </section>
 

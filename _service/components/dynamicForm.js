@@ -34,9 +34,9 @@ export default {
     }
   },
   created: function () {
-    this.$data.formcontrol = jsyaml.load(this.$props.data.form)
+    this.$data.formcontrol = jsyaml.load(this.$props.cfg.form)
     this.$data.formdata = _.reduce(this.$data.formcontrol, (acc, i) => {
-      acc[i.name] = ''
+      acc[i.name] = this.$props.data ? this.$props.data[i.name] : ''
       return acc
     }, {})
     this.$data.errors = _.reduce(this.$data.formcontrol, (acc, i) => {
@@ -50,7 +50,7 @@ export default {
       if (invalid) return
       this.$data.submitting = true
       try {
-        const res = await axios.post(this.$props.data.url, data)
+        const res = await axios.post(this.$props.cfg.url, data)
       } catch (err) {
         this.$store.dispatch('toast', { message, type: 'error' })
       } finally {
@@ -69,7 +69,7 @@ export default {
       return this.$data.errors[name]
     }
   },
-  props: ['data'],
+  props: ['cfg', 'data'],
   components: formComponents,
   template: `
 <form>
