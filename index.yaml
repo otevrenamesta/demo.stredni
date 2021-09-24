@@ -21,7 +21,7 @@ children:
             class: section
             title: novinky
             pocet: 3
-            url: /api/uni/posts/
+            url: /api/uni/posts
             detail_title: všechny články
             detail_link: /novinky
           - component: newestItemsText

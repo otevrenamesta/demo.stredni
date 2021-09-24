@@ -107,10 +107,11 @@ export default {
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-    </router-link>
+        </div>
+      </router-link>
+    
+    </div>
   </div>
 
   <router-link :to="data.detail_link">

@@ -6,6 +6,7 @@ gitlab: https://gitlab.com/otevrenamesta
 github: https://github.com/otevrenamesta
 instagram:
 cdn: /cdn/
+cdnapi: /api/cdn
 menu:
 - label: Radnice
   link: "/radnice/"
