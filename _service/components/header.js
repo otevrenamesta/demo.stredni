@@ -37,7 +37,7 @@ export default {
         {{ $store.state.user.CurrentFamilyName }} {{ $store.state.user.CurrentGivenName }}
       </div>
       <div class="navbar-item">
-        <a class="button is-danger" href="/nia/logout">
+        <a class="button is-danger" href="/api/nia/logout">
           Odhlásit
         </a>
       </div>
@@ -48,7 +48,7 @@ export default {
           <a class="button is-primary" href="https://www.eidentita.cz/Home">
             <strong>Zaregistrovat</strong>
           </a>
-          <a class="button is-light" href="/nia/login">
+          <a class="button is-light" href="/api/nia/login">
             Příhlásit se
           </a>
         </div>
