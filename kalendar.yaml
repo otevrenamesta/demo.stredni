@@ -7,5 +7,5 @@ children:
     class: container
     children:
       - component: eventIndex
-        url: /uniapi/events/
+        url: /api/uni/events/
         pagesize: 4

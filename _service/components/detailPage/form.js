@@ -22,7 +22,7 @@ export default {
   created: async function () {
     try {
       const id = this.$router.currentRoute.params.id
-      const url = `/uniapi/forms/?filter={"id":${id}}`
+      const url = `/api/uni/forms/?filter={"id":${id}}`
       const dataReq = await axios.get(url)
       this.$data.item = dataReq.data[0]
     } catch (_) {

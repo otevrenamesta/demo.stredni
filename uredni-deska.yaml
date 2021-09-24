@@ -11,4 +11,4 @@ children:
     children:
       - component: uredniDeska
         class: content
-        url: /uniapi/urednideskas/
+        url: /api/uni/urednideskas/

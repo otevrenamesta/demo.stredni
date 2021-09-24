@@ -21,14 +21,14 @@ children:
             class: section
             title: novinky
             pocet: 3
-            url: /uniapi/posts/
+            url: /api/uni/posts/
             detail_title: všechny články
             detail_link: /novinky
           - component: newestItemsText
             class: section
             title: nejnovější na úřední desce
             pocet: 5
-            url: /uniapi/urednideskas/
+            url: /api/uni/urednideskas/
             detail_title: úřední deska
             detail_link: /uredni-deska
           - component: dlazdice
@@ -63,14 +63,14 @@ children:
         class: column is-one-third
         children: 
           - component: kalendarBest
-            url: /uniapi/events/
+            url: /api/uni/events/
             pocet: 5
             title: nejbližší události
             detail_title: Kalendář
             detail_link: /kalendar
           - component: formsAnnonce
             title: Potřebuji vyřídit / Životní situace
-            url: /uniapi/forms/
+            url: /api/uni/forms/
             detail_title: Služby
             detail_link: /radnice/sluzby
           - component: MDText

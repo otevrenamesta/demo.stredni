@@ -7,5 +7,5 @@ children:
     class: container
     children:
       - component: postIndex
-        url: /uniapi/posts/
+        url: /api/uni/posts/
         pagesize: 4

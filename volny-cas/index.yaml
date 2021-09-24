@@ -18,7 +18,7 @@ children:
         class: column is-two-thirds
         children:
           - component: kalendarBest
-            url: /uniapi/events/
+            url: /api/uni/events/
             pocet: 5
             title: nejbližší události
             detail_title: Kalendář

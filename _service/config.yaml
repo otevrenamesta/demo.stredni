@@ -25,6 +25,6 @@ detailpages:
     #   - component: newestItemsText
     #     title: podobne clanky
     #     pocet: 5
-    #     url: /uniapi/posts/
+    #     url: /api/uni/posts/
   - path: /formulare
     component: ./components/listPage/form.js
