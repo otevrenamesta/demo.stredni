@@ -1,0 +1,10 @@
+title: Projekty
+desc: stranka pro TS
+updated_at: 2021-01-18T12:47:37.254Z
+layout: page
+children:
+  - component: mapaProjektu
+    url: https://modurad.otevrenamesta.cz/omstredni/projekty/
+    startLat: 49.4100908
+    startLng: 14.6805764
+    height: 500
