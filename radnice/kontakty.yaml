@@ -8,9 +8,10 @@ children:
     children:
       - component: MDText
         class: content
-        content: |
+        content: >
           Tato stranka obsahuje kontakty na jednotlive pracovniky uradu.
+
           Muze ji naplnovat manualne povereny pracovnik ...
 
-          ... a nebo se muze __automaticky generovat__ z uradoveho uzivatelskeho kmene.
-          
+
+          ... a nebo se muze __automaticky generovat__ z uradoveho uzivatelskeho kmene. .. Husty!! ;)

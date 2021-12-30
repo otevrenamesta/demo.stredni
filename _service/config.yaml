@@ -5,8 +5,8 @@ facebook: https://www.facebook.com/otevrenamesta
 gitlab: https://gitlab.com/otevrenamesta
 github: https://github.com/otevrenamesta
 instagram:
-cdn: /cdn/
-cdnapi: /api/cdn
+cdn: https://modurad.otevrenamesta.cz/media/omstredni
+cdnapi: https://modurad.otevrenamesta.cz/cdn
 menu:
 - label: Radnice
   link: "/radnice/"
