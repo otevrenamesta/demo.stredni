@@ -7,5 +7,5 @@ children:
     class: container
     children:
       - component: eventIndex
-        url: /api/uni/events/
+        url: https://modurad.otevrenamesta.cz/omstredni/uni/events/
         pagesize: 4

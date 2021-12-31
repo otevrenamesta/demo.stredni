@@ -12,6 +12,8 @@ menu:
   link: "/radnice/"
 - label: Volný čas
   link: "/volny-cas/"
+- label: Projekty
+  link: /projekty
 globalComponents:
   - breadCrumbs
   - paginator

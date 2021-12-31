@@ -7,5 +7,5 @@ children:
     class: container
     children:
       - component: postIndex
-        url: /api/uni/posts/
+        url: https://modurad.otevrenamesta.cz/omstredni/uni/posts/
         pagesize: 4

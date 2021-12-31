@@ -48,11 +48,11 @@ children:
                 icon: fa-book-open
                 content: Vše, co se týče základních škol, školek, aj.
                 background: https://www.litomysl.cz/php/obrazky/nahled/1625225320784_.jpg
-              - title: jfslfj
+              - title: Participativní rozpočet
                 color: warning
                 icon: fa-phone
                 content: Seznam všech kontaktů na pracovníky úřadu.
-                link: /radnice/kontakty
+                link: /paro
               - title: kontakty
                 color: warning
                 icon: fa-phone
@@ -63,14 +63,14 @@ children:
         class: column is-one-third
         children: 
           - component: kalendarBest
-            url: /api/uni/events/
+            url: https://modurad.otevrenamesta.cz/omstredni/uni/events/
             pocet: 5
             title: nejbližší události
             detail_title: Kalendář
             detail_link: /kalendar
           - component: formsAnnonce
             title: Potřebuji vyřídit / Životní situace
-            url: /api/uni/forms/
+            url: https://modurad.otevrenamesta.cz/omstredni/uni/forms/
             detail_title: Služby
             detail_link: /radnice/sluzby
           - component: MDText
