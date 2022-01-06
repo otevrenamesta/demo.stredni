@@ -102,35 +102,13 @@ export default {
     </div>
   </div>
 
-  <div class="field has-addons">
-    <p class="control">
-      <button class="button is-success" 
-          :disabled="submitting || hasErrors"
-      >
-        <span class="icon is-small"><i class="fas fa-bold"></i></span>
-        <span>Odeslat</span>
-      </button>
-    </p>
-    <p class="control">
-      <button class="button is-danger" 
-        :disabled="submitting || hasErrors"
-      >
-        <span class="icon is-small"><i class="fas fa-italic"></i></span>
-        <span>Stáhnout PDF</span>
-      </button>
-    </p>
-    <p class="control">
-      <button class="button is-warning" 
-          :disabled="submitting || hasErrors"
-      >
-        <span class="icon is-small">
-          <i class="fas fa-underline"></i>
-        </span>
-        <span>Poslat datovkou</span>
-      </button>
-    </p>
-  </div>
+  <slot name="submitbuttons" :hasErrors="hasErrors" :submitting="submitting">  
+    <button class="button is-success" :disabled="submitting || hasErrors">
+      <span class="icon is-small"><i class="fas fa-bold"></i></span>
+      <span>uložit</span>
+    </button>
+  </slot>
 
-<form>
+</form>
   `
 }

@@ -8,15 +8,19 @@ export default {
   computed: {
     profile: function () {
       const u = this.$store.state.user
-      return this.$store.getters.userLogged ? {
-        jmeno: u.CurrentFamilyName,
-        prijmeni: u.CurrentGivenName,
-        id: u['ZR10 IdType'] + u['ZR10 IdNumber'],
-        obec: u.CurrentAddress.PostName,
-        psc: u.CurrentAddress.PostCode,
-        narozeni: u.DateOfBirth,
-        email: u.Email
-      } : null
+      try {
+        return this.$store.getters.userLogged ? {
+          jmeno: u.CurrentFamilyName,
+          prijmeni: u.CurrentGivenName,
+          id: u['ZR10 IdType'] + u['ZR10 IdNumber'],
+          obec: u.CurrentAddress.PostName,
+          psc: u.CurrentAddress.PostCode,
+          narozeni: u.DateOfBirth,
+          email: u.Email
+        } : null
+      } catch (_) {
+        return null
+      }
     }
   },
   created: async function () {
@@ -68,7 +72,38 @@ export default {
       
       <h1 class="title">{{item.title}}</h1>
 
-      <DynamicForm :cfg="item" :data="profile" />
+      <DynamicForm :cfg="item" :data="profile">
+        <template v-slot:submitbuttons="{ hasErrors, submitting }">
+          <div class="field has-addons">
+            <p class="control">
+              <button class="button is-success" 
+                  :disabled="submitting || hasErrors"
+              >
+                <span class="icon is-small"><i class="fas fa-bold"></i></span>
+                <span>Odeslat</span>
+              </button>
+            </p>
+            <p class="control">
+              <button class="button is-danger" 
+                :disabled="submitting || hasErrors"
+              >
+                <span class="icon is-small"><i class="fas fa-italic"></i></span>
+                <span>Stáhnout PDF</span>
+              </button>
+            </p>
+            <p class="control">
+              <button class="button is-warning" 
+                  :disabled="submitting || hasErrors"
+              >
+                <span class="icon is-small">
+                  <i class="fas fa-underline"></i>
+                </span>
+                <span>Poslat datovkou</span>
+              </button>
+            </p>
+          </div>
+        </template>
+      </DynamicForm>
 
       <div class="notification is-info">
         <span class="icon is-large"><i class="fas fa-info-circle"></i></span>
