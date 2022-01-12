@@ -7,6 +7,8 @@ github: https://github.com/otevrenamesta
 instagram:
 cdn: https://modurad.otevrenamesta.cz/media/omstredni
 cdnapi: https://modurad.otevrenamesta.cz/cdn
+profileURL: https://modurad.otevrenamesta.cz/omstredni/auth/profile
+api: https://modurad.otevrenamesta.cz/omstredni
 menu:
 - label: Radnice
   link: "/radnice/"
