@@ -1,0 +1,32 @@
+<div>
+
+  <pageHeader />
+
+  <div class="container">
+    
+    <i v-if="loading" class="fas fa-spinner fa-spin"></i>
+    <div v-else class="section">
+      <breadCrumbs v-if="data.breadcrumbs" :data="data.breadcrumbs" />
+      
+      <h1 class="title is-1">{{item.title}}</h1>
+
+      <h4 class="subtitle is-6">{{ item.cas | longDate }}</h4>
+
+      <img v-if="item.obrazek" :src="item.obrazek" />
+
+      <div class="content">
+        <markdown :text="item.content" />
+      </div>
+
+    </div>
+
+    <section v-for="(i, idx) in data.children" :key="idx" class="section">
+
+      <component :is="i.component" :data="i" />
+  
+    </section>
+  </div>
+
+  <pageFooter />
+
+</div>

@@ -22,8 +22,8 @@ globalComponents:
 detailpages:
   - path: /novinky/:id
     component: ./components/detailPage/post.js
-  - path: /kalendar/:id
-    component: ./components/detailPage/kalendar.js
+  # - path: /kalendar/:id
+  #   component: ./components/detailPage/kalendar.js
   - path: /formulare/:id
     component: ./components/detailPage/form.js
     # children:
@@ -33,3 +33,8 @@ detailpages:
     #     url: /api/uni/posts/
   - path: /formulare
     component: ./components/listPage/form.js
+apps:
+  - path: /novinky/
+    module: ./components/detailPage/post.js
+    url: api
+    template: page
