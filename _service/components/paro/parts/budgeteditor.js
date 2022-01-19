@@ -16,10 +16,10 @@ export default {
   },
   methods: {
     remove: function (item) {
-      const items = _parse(this.$attrs.value)
+      const items = this.data[this.cfg.name]
       const idx = _.findIndex(items, i => (i.name === item.name))
       items.splice(idx, 1)
-      this.$emit('input', JSON.stringify(items))
+      // this.$emit('input', JSON.stringify(items))
     },
     add: function () {
       this.$data.curr = null

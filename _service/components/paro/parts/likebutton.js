@@ -10,17 +10,17 @@ export default {
   methods: {
     fetchData: async function () {
       if (this.$store.state.user) {
-        const res = await axios.get(`${this.API}/support/${projId}`)
+        const res = await axios.get(`${this.API}/support/${this.proj.id}`)
         this.$data.support = res && res.data.length > 0
       }
     },
     sendSupport: async function () {
       const projId = this.$router.currentRoute.params.id
       if (this.$data.support) {
-        await axios.delete(`${this.API}/support/${projId}`)
+        await axios.delete(`${this.API}/support/${this.proj.id}`)
         this.$data.support = false
       } else {
-        const res = await axios.post(`${API}/paro/support/${projId}`)
+        const res = await axios.post(`${API}/paro/support/${this.proj.id}`)
         this.$data.support = true
         this.$props.project.state = res.data
       }

@@ -81,7 +81,7 @@ export default {
   props: ['cfg', 'data', 'submit', 'extracomponents'],
   components: formComponents,
   template: `
-<form @submit.prevent="handleSubmit">
+<form @submit.prevent>
 
   <div class="columns is-flex-wrap-wrap">
     <div class="column" :class="i.class" v-for="i, idx in $data.formcontrol" :key="idx">
@@ -107,7 +107,7 @@ export default {
   </div>
 
   <slot name="submitbuttons" :hasErrors="hasErrors" :submitting="submitting">  
-    <button class="button is-success" :disabled="submitting || hasErrors">
+    <button class="button is-success" :disabled="submitting || hasErrors" @click="handleSubmit">
       <span class="icon is-small"><i class="fas fa-bold"></i></span>
       <span>uložit</span>
     </button>
