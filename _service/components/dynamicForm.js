@@ -55,9 +55,7 @@ export default {
       if (invalid) return
       this.$data.submitting = true
       try {
-        const res = await axios.post(this.$props.cfg.url, data)
-      } catch (err) {
-        this.$store.dispatch('toast', { message, type: 'error' })
+        const res = await this.$props.submit(_.clone(this.formdata))
       } finally {
         this.$data.submitting = false
       }      
@@ -72,9 +70,15 @@ export default {
     },
     getError: function (name) {
       return this.$data.errors[name]
+    },
+    getComponent: function (name) {
+      if (this.extracomponents && name in this.extracomponents) {
+        return this.extracomponents[name]
+      }
+      return name
     }
   },
-  props: ['cfg', 'data'],
+  props: ['cfg', 'data', 'submit', 'extracomponents'],
   components: formComponents,
   template: `
 <form @submit.prevent="handleSubmit">
@@ -86,7 +90,7 @@ export default {
         <label class="label">{{ i.label }}</label>
         
         <div class="control has-icons-right">
-          <component :is="i.component" 
+          <component :is="getComponent(i.component)" 
             :class="getError(i.name) ? 'is-danger' : 'is-success'"
             :data="$data.formdata" :cfg="i"
             :placeholder="i.placeholder" />

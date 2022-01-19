@@ -5,11 +5,11 @@ export default {
       loading: true
     }
   },
+  props: ['data'],
   created: async function () {
     try {
       const id = this.$router.currentRoute.params.id
-      const url = `https://modurad.otevrenamesta.cz/omstredni/uni/events/?filter={"id":${id}}`
-      const dataReq = await axios.get(url)
+      const dataReq = await axios.get(this.data.url.replace('{{ID}}', id))
       this.$data.item = dataReq.data[0]
     } catch (_) {
       this.$data.item = { title: 'newestItemsText: asi spatne url v datech' }
@@ -33,22 +33,9 @@ export default {
     } : {}
   },
   template: `
-<div>
-
-  <pageHeader />
-
-  <div class="container">
-
     <i v-if="loading" class="fas fa-spinner fa-spin"></i>
-    <section v-else class="section">
+    <div v-else>
     
-      <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li><router-link to="/"><i class="fas fa-home"></i></router-link></li>
-          <li><router-link to="/kalendar">Kalendář</router-link></li>
-        </ul>
-      </nav>
-      
       <h1 class="title">{{item.title}}</h1>
 
       <h4 class="subtitle is-6">{{ item.cas | longDate }}</h4>
@@ -59,12 +46,6 @@ export default {
         <markdown :text="item.content" />
       </div>
 
-    </section>
-
-  </div>
-
-  <pageFooter />
-
-</div>
+    </div>
   `
 }

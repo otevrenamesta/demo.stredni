@@ -1,11 +1,11 @@
 updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 breadcrumbs:
-  - link: /kalendar/
-    title: Akce
+  - link: /formulare/
+    title: Zivotni situace
 children:
-  - component: detailPage/kalendar
-    url: https://modurad.otevrenamesta.cz/omstredni/uni/events/?filter={"id":"{{ID}}"}
+  - component: detailPage/form
+    url: https://modurad.otevrenamesta.cz/omstredni/uni/forms/?filter={"id":"{{ID}}"}
   - component: MDText
     class: content
     content: |

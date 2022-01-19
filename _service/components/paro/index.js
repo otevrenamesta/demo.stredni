@@ -1,5 +1,4 @@
-import ProjectForm from './paro/form.js'
-import ProjectDetail from './paro/projectdetail.js'
+import ProjectDetail from './project_card.js'
 
 export default {
   data: function () {
@@ -26,40 +25,29 @@ export default {
     }
   },
   props: ['data'],
-  methods: {
-    edit: function () {
-      this.modalopened = true
-    },
-    cancel: function () {
-      this.modalopened = false
-    }
-  },
-  components: { ProjectDetail, ProjectForm },
+  components: { ProjectDetail },
   template: `
   <div v-if="loaded">
     <div v-if="curr">
-      <button class="button is-primary is-pulled-right" @click="edit">
+      <router-link class="button is-primary is-pulled-right" to="/paro/navrh/">
         podat/upravit projekt
-      </button>
+      </router-link>
       <h2 class="title">{{ curr.name }}</h2>
       <p>
-        Začátek podávání návrhů: {{ curr.submission_start | date }}
+        Začátek podávání návrhů: {{ curr.submission_start | date }}<br/>
+        Konec navrhování: {{ curr.submission_end | date }}<br/>
+        Začátek ověřování návrhů: {{ curr.thinking_start | date }}<br/>
+        Začátek hlasování v anketě: {{ curr.voting_start | date }}<br/>
+        Konec hlasování: {{ curr.voting_end | date }}<br/>
+        Limit rozpočtu návrhu: {{ curr.budgetlimit }} Kč<br/>
+        Počet palečků základní podpory: {{ curr.minimum_support }}
       </p>
       <hr />
       <div class="columns">
-        <ProjectDetail v-for="i,idx in projekty" :key="idx" :proj="i" />
+        <ProjectDetail v-for="i,idx in projekty" :key="idx" :proj="i" :call="curr" />
       </div>
     </div>
     <span v-else>Není žádná aktuální výzva</span>
-    <div class="modal" :class="{'is-active': modalopened}">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <div class="box">
-          <ProjectForm :data="data" />
-        </div>
-      </div>
-      <button class="modal-close is-large" aria-label="close" @click="cancel" />
-    </div>
   </div>
   `
 }

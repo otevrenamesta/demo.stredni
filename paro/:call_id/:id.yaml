@@ -1,0 +1,8 @@
+updated_at: 2021-01-18T12:47:37.254Z
+layout: page
+breadcrumbs:
+  - link: /paro
+    title: Participativní rozpočet
+children:
+  - component: paro/detail
+    url: https://modurad.otevrenamesta.cz/omstredni/paro/

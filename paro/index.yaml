@@ -6,5 +6,5 @@ children:
   - component: MDText
     class: content
     content: Participativní rozpočet, zkráceně PaRo je nástroj občanské participace. PaRo ma nejaka [pravidla](/paro/pravidla/). 
-  - component: PaRoIndex
+  - component: paro/index
     url: https://modurad.otevrenamesta.cz/omstredni/paro/

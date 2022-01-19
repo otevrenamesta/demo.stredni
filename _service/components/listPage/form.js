@@ -6,9 +6,10 @@ export default {
       loading: true
     }
   },
+  props: ['data'],
   created: async function () {
     try {
-      const dataReq = await axios.get('/api/uni/forms/', { params: {
+      const dataReq = await axios.get(this.data.url, { params: {
         sort: 'title:asc',
         currentPage: 1,
         perPage: 10
@@ -22,21 +23,8 @@ export default {
   },
   props: ['data'],
   template: `
-  <div>
-
-  <pageHeader />
-
-  <div class="container">
-
     <i v-if="loading" class="fas fa-spinner fa-spin"></i>
     <section v-else class="section">
-    
-      <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li><router-link to="/"><i class="fas fa-home"></i></router-link></li>
-          <li class="is-active"><a href="#" aria-current="page">Formuláře</a></li>
-        </ul>
-      </nav>
       
       <div class="columns is-flex-wrap-wrap">
         <div v-for="(i, idx) in items" :key="idx" class="column is-3">
@@ -62,10 +50,5 @@ export default {
       <paginator />
 
     </section>
-  </div>
-
-  <pageFooter />
-
-</div>
   `
 }

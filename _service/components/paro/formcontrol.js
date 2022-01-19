@@ -24,7 +24,17 @@ export default `
   
 - name: budget
   label: rozpočet projektu, opřený o nějakou referenci (eshop, konzultace se řemeslníkem)
-  component: finput
+  component: budgeteditor
   rules: required
   class: is-full
+
+- name: poloha
+  label: poloha ve formatu
+  component: finput
+  rules: required
+
+- name: photo
+  label: odkaz na fotografii
+  component: finput
+  rules: required
 `

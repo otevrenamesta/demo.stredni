@@ -1,0 +1,11 @@
+title: Formuláře
+desc: stranka pro TS
+updated_at: 2021-01-18T12:47:37.254Z
+layout: page
+children:
+  - component: composition
+    class: container
+    children:
+      - component: listPage/form
+        url: https://modurad.otevrenamesta.cz/omstredni/uni/forms/
+        pagesize: 4

@@ -5,6 +5,7 @@ export default {
       loading: true
     }
   },
+  props: ['data'],
   computed: {
     profile: function () {
       const u = this.$store.state.user
@@ -54,21 +55,8 @@ export default {
     DynamicForm: () => import('../dynamicForm.js')
   },
   template: `
-  <div>
-
-  <pageHeader />
-
-  <div class="container">
-
     <i v-if="loading" class="fas fa-spinner fa-spin"></i>
     <section v-else class="section">
-    
-      <nav class="breadcrumb is-medium" aria-label="breadcrumbs">
-        <ul>
-          <li><router-link to="/"><i class="fas fa-home"></i></router-link></li>
-          <li><router-link to="/formulare">Formuláře</router-link></li>
-        </ul>
-      </nav>
       
       <h1 class="title">{{item.title}}</h1>
 
@@ -113,11 +101,5 @@ export default {
       </div>
 
     </section>
-
-  </div>
-
-  <pageFooter />
-
-</div>
   `
 }
