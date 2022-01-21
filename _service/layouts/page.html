@@ -1,21 +1,12 @@
-<div>
 
-  <pageHeader />
+<div class="container">
+  <breadCrumbs v-if="data.breadcrumbs" :data="data.breadcrumbs" />
 
-  <div class="container">
+  <section class="section">
+    <h1 v-if="data.title" class="title is-1">{{data.title}}</h1>
 
-    <div class="section">
-      <breadCrumbs v-if="data.breadcrumbs" :data="data.breadcrumbs" />
-      <h1 class="title is-1">{{data.title}}</h1>
-    </div>
+    <component v-for="(i, idx) in data.children" :key="idx"
+      :is="i.component" :data="i" />
 
-    <section v-for="(i, idx) in data.children" :key="idx" class="section">
-
-      <component :is="i.component" :data="i" />
-  
-    </section>
-  </div>
-
-  <pageFooter />
-
+  </section>
 </div>

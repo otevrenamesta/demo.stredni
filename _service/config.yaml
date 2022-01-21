@@ -21,6 +21,6 @@ globalComponents:
   - paginator
 apps:
   - path: /novinky/
-    module: ./components/detailPage/post.js
+    module: ./detailPage/post.js
     url: api
     template: page
