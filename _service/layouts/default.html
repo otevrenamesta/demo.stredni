@@ -1,13 +1,5 @@
+
 <div>
-  <pageHeader />
-
-  <component 
-    :is="i.component" 
-    :data="i" 
-    
-    v-for="(i, idx) in data.children" 
-    :key="idx" />
-  
-  <pageFooter />
-
+  <component v-for="(i, idx) in data.children" :key="idx"
+    :is="i.component" :data="i" />
 </div>
