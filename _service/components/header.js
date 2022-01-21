@@ -3,6 +3,13 @@ export default {
   data: function () {
     return { expanded: false }
   },
+  methods: {
+    logout: async function () {
+      const r = await axios.get('https://modurad.otevrenamesta.cz/mutabor/nia/logout', { withCredentials: true })
+      localStorage.removeItem('_BBB_web_user')
+      window.location.href = r.data
+    }
+  },
   template: `
 <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
   <div class="container">
@@ -37,9 +44,9 @@ export default {
         {{ $store.state.user.CurrentFamilyName }} {{ $store.state.user.CurrentGivenName }}
       </div>
       <div class="navbar-item">
-        <a class="button is-danger" href="https://modurad.otevrenamesta.cz/omstredni/nia/logout">
+        <button class="button is-danger" @click="logout">
           Odhlásit
-        </a>
+        </button>
       </div>
     </div>
     <div v-else class="navbar-end">
