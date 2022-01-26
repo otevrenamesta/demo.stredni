@@ -17,10 +17,16 @@ menu:
 - label: Projekty
   link: /projekty
 globalComponents:
-  - breadCrumbs
-  - paginator
+  breadCrumbs: breadCrumbs
+  paginator: paginator
 apps:
-  - path: /novinky/
-    module: ./detailPage/post.js
-    url: api
-    template: page
+  # - path: /novinky/
+  #   module: ./detailPage/post.js
+  #   url: api
+  #   template: page
+  - path: /paro/
+    title: Participativní rozpočet
+    module: https://modurad.otevrenamesta.cz/adminmodules/bbb-paro/index.js
+    templates: https://modurad.otevrenamesta.cz/adminmodules/bbb-paro/layouts/bulma/
+    layout: page
+    url: https://modurad.otevrenamesta.cz/omstredni/paro/
